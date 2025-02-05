@@ -18,8 +18,8 @@ interface BaseImage extends HTMLImageElement {
 const App = () => {
   const [message, setMessage] = useState('');
   const [password, setPassword] = useState('');
-  const [encodedImage, setEncodedImage] = useState('');
-  const [decodedMessage, setDecodedMessage] = useState('');
+  const [encodedImage, setEncodedImage] = useState<string>('');
+  const [decodedMessage, setDecodedMessage] = useState<string>('');
   const [error, setError] = useState('');
   const [baseImage, setBaseImage] = useState<BaseImage | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -377,7 +377,7 @@ const App = () => {
     setMessage('');
     setPassword('');
     setBaseImage(null);
-    setEncodedImage(null);
+    setEncodedImage('');
     setError('');
     setIsLoading(false);
     setImageSource('upload');
