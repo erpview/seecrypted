@@ -19,8 +19,6 @@ html, body {
 }
 
 body {
-  display: flex;
-  place-items: center;
   min-width: 320px;
 }
 
